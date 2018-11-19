@@ -39,7 +39,7 @@ public class PhoneList {
 	}
 	
 	/*
-	 * Gets all phones. The returned list is unmodifiable.  
+	 * Gets all phones. The list returned is unmodifiable.  
 	 */
 	public List<Phone> getAllPhones() {
 		// TODO: return an unmodifiable view of the list
@@ -47,8 +47,8 @@ public class PhoneList {
 	}
 	
 	/*
-	 * Gets all phones which are not dominated by another phone. The list
-	 * returned is unmodifiable.  
+	 * Gets all phones which are not dominated by another phone. The
+	 * collection returned is unmodifiable.  
 	 */
 	public Collection<Phone> getBestPhones() {
 		// TODO: return an unmodifiable view of the set
