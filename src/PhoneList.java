@@ -42,8 +42,7 @@ public class PhoneList {
 	 * Gets all phones. The list returned is unmodifiable.  
 	 */
 	public List<Phone> getAllPhones() {
-		// TODO: return an unmodifiable view of the list
-		return allPhones;
+		return Collections.unmodifiableList(allPhones);
 	}
 	
 	/*
@@ -51,7 +50,6 @@ public class PhoneList {
 	 * collection returned is unmodifiable.  
 	 */
 	public Collection<Phone> getBestPhones() {
-		// TODO: return an unmodifiable view of the set
-		return bestPhones;
+		return Collections.unmodifiableCollection(bestPhones);
 	}
 }

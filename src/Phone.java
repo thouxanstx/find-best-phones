@@ -4,8 +4,11 @@ public class Phone {
 	private final int batteryCapacity;
 	
 	public Phone(String model, double screenSize, int batteryCapacity) {
-		// TODO: ensure the screenSize and batteryCapacity are positive
-		// by throwing an IllegalArgumentException otherwise
+		if(screenSize <= 0 || batteryCapacity <= 0) { 
+			throw new IllegalArgumentException(
+					"Screen size and/or battery capacity can't be negative"
+					);
+		}
 		
 		this.model = model;
 		this.screenSize = screenSize;
@@ -39,7 +42,12 @@ public class Phone {
 	 * other criterion.
 	 */
 	public boolean dominates(Phone other) {
-		// TODO: implement this method
-		return false;
+		if(this.batteryCapacity > other.getBatteryCapacity() && this.screenSize >= other.getScreenSize() || 
+				this.batteryCapacity >= other.getBatteryCapacity() && this.screenSize > other.getScreenSize()) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	}
 }
